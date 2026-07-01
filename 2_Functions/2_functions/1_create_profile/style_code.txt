@@ -1,0 +1,24 @@
+Code Style
+When it comes to code style, everyone's got a slightly different opinion. When in doubt, ask your friends, coworkers, or managers.
+
+Usually, code style falls into a few categories:
+
+Mechanics:
+The nitty-gritty details of formatting and layout that everyone expects. These are the specific "rules," often found by an automated code linter that can warn you of any violations.
+In Python, this is often the domain of naming and spacing.
+Standards
+A community-driven choice of one option from many.
+In Python, one such example is function documentation - "docstrings." Although there are many possible formats in which to document a function, the Python community has settled on a standard structure, even if the details may differ.
+Patterns:
+Design idioms and approaches made possible or impossible by the design of a language.
+Python, many tools are available to you, and many niceties are built into the language, so Python supports common idioms that aren't seen as often in other languages.
+Python Style Guide
+Python's style guide is laid out formally in PEP 8(opens in a new tab), although Kenneth Reitz has a nicely laid out webpage(opens in a new tab) of the same content. Even large companies will occasionally put together a style guide, with rules designed specifically for the particular corporate infrastructure. Google's style guide(opens in a new tab) is a good example of this.https://google.github.io/styleguide/pyguide.html
+def do_a_task(x):
+    """Log the user into the system.
+
+    The user must already have a valid username.
+
+    :param x: The username.
+   """
+   pass
