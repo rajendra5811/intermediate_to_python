@@ -1,0 +1,39 @@
+Argument	An object (or a name referring to an object) that is supplied to a function when the function is invoked.
+Keyword Argument	An argument that is supplied to a function call by keyword, not by position.
+Optional Parameter	A category of parameter defined by a function signature that provides a default value for a parameter name.
+Parameter	A name defined in a function signature that will be bound to a value when the function is invoked.
+Positionally-Supplied Argument	An argument that is supplied to a function call by position, not by keyword.
+Required Parameter	A category of parameter defined by a function signature that does not provide any default value, and must receive a value from a corresponding supplied argument.
+
+print(..., sep=' ', end='\n', file=sys.stdout, flush=False)
+range(start, stop, step=1)
+enumerate(iter, start=0)
+int(x, base=10)
+pow(x, y, z=None)
+seq.sort(*, key=None, reverse=None)
+The subprocess.Popen constructor(opens in a new tab), which opens a connection to a subprocess, has just one required parameter - args - but it also has a whole lot of optional arguments!
+
+subprocess.Popen(args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=True, shell=False, cwd=None, env=None, universal_newlines=None, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, group=None, extra_groups=None, user=None, umask=-1, encoding=None, errors=None, text=None)
+
+
+A variadic parameter collection collects excess arguments (that would otherwise go unmatched to a parameter) into a data structure, for the function implementation's use. We'll see two kinds of variadic parameters: variadic positional parameters and variadic keyword parameters.
+
+Usually, variadic parameters are useful when you're either:
+
+Defining a function with a variable number of positional arguments
+Capturing an unknown collection of arguments, in order to forward them to another handler, like a superclass, a decorator, or other fancy objects.
+
+Keyword-Only Parameters	A subcategory of optional parameter defined by a function signature that can only be overridden by an argument supplied by keyword.
+Variadic Positional Argument Unpacking	A mechanism to unpack an iterable with the syntax *iterable into positional arguments supplied when a function is invoked.
+Variadic Positional Parameter Collection	A category of parameter like *args that captures a variable number of excess positional arguments in a tuple.
+
+A parameter of the form **name (such as**kwargs) in a function signature introduces a variadic keyword parameter. This parameter will capture excess keyword-supplied arguments into a dictionary named the same thing, such as kwargs.
+
+Why would you ever do something like this? Usually, variadic keyword parameters are useful when you're either:
+
+Allowing arbitrary named parameters for special configuration
+As with variadic positional parameters, capturing an unknown collection of arguments, in order to forward them to another handler, like a superclass, a decorator, or other fancy objects.
+Variadic keyword parameters are a bit less common, but still appear throughout Python. For example, the str.format method
+#str.format(*args,* *kwargs)
+
+The syntax **mapping* at a call site* consumes the mapping's key-value pairs into a variable number of keyword-supplied arguments.
